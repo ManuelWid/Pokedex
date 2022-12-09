@@ -36,7 +36,7 @@ function buildCard(pokemon){
     let pokeid = pokemon.id.toLocaleString("en-US",{minimumIntegerDigits: 3});
     // create a link to the details page
     let cardlink = document.createElement("a");
-    cardlink.href = "details.php?id=" + pokemon.id;
+    cardlink.href = "details.html?id=" + pokemon.id;
 
     // the main card div holding everything else
     let carddiv = document.createElement("div");
