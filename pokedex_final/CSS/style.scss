@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.card-pkmn, .card-pkmn * {
+    text-decoration: none;
+    color: black;
+}
+
+.btn-type, .btn-type:hover {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+#pokedex {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2vh 1vw;
+}
+
+#img {
+    max-width: 50%;
+    height: auto;
+}
+
+#dextable {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    width: 100%;
+    th, td {
+        border: 1px solid grey;
+    }
+    th:nth-child(3){
+        width: 80%;
+    }
+}
+
+.tcent {
+    text-align: center;
+}
+
+/* ======================================================
+SEARCH AUTO COMPLETE START, copy+paste bootstrap
+====================================================== */
+
+.autocomplete {
+    /*the container must be positioned relative:*/
+    position: relative;
+    display: inline-block;
+  }
+  input {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 16px;
+  }
+  input[type=text] {
+    background-color: #f1f1f1;
+    width: 100%;
+  }
+  input[type=submit] {
+    background-color: DodgerBlue;
+    color: #fff;
+  }
+  .autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+  }
+  .autocomplete-items div:hover {
+    /*when hovering an item:*/
+    background-color: #e9e9e9;
+  }
+  .autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+  }
+
+/* ======================================================
+SEARCH AUTO COMPLETE END
+====================================================== */
+
+@media screen and (max-width: 1200px) {
+    #pokedex {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #pokedex {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #pokedex {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
