@@ -99,4 +99,4 @@ function autocomplete(inp, arr) {
   });
   }
 
-  autocomplete(document.getElementById("id"), pokearr);
+  autocomplete(document.getElementById("search"), pokearr);
